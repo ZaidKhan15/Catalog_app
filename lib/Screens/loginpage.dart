@@ -2,20 +2,30 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Loginpage extends StatelessWidget {
-  const Loginpage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Center(
-        child: Text("Login Page",
-        style: TextStyle(
-          fontSize: 20,
-          color: Colors.blue,
-          fontWeight: FontWeight.bold
+        child: Column(
+      children: <Widget>[
+        Image.asset(
+          "assets/images/login.png",
+          fit: BoxFit.cover,
         ),
+        Text(
+          'Welcome',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
         ),
-      ),
-    );
+        Text(
+          'Login to Continue',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        )
+      ],
+    ));
   }
 }
