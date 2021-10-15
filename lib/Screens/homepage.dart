@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:catalog_app/Widgets/drawer.dart';
 
 class Homepage extends StatelessWidget {
   
@@ -15,7 +16,7 @@ class Homepage extends StatelessWidget {
             child: Text('Welcome to Flutter World'),
           ),
         ),
-        drawer: Drawer(),
+        drawer: MyDrawer(),
       );
   }
 }
