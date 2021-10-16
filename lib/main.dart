@@ -1,5 +1,6 @@
 import 'package:catalog_app/Screens/homepage.dart';
 import 'package:catalog_app/Screens/loginpage.dart';
+import 'package:catalog_app/Widgets/themes.dart';
 import 'package:catalog_app/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'Screens/homepage.dart';
@@ -18,9 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
      
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.deepPurple,
-      fontFamily: GoogleFonts.lato().fontFamily,
-      ),
+      theme: MyTheme.lightTheme(context),
       darkTheme: ThemeData(
         brightness: Brightness.dark
       ),
