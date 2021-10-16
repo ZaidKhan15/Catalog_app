@@ -6,7 +6,7 @@ import 'package:catalog_app/Widgets/item_widget.dart';
 class Homepage extends StatelessWidget {
   
 
-  @override
+  
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
