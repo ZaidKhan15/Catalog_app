@@ -14,10 +14,10 @@ class Homepage extends StatelessWidget {
       ),
        
         body: ListView.builder(
-          itemCount: catalogModel.items.length,
+          itemCount: CatalogModel.items.length,
           itemBuilder: (context,index)
           {
-            return ItemWidget();
+            return ItemWidget(item: CatalogModel.items[index],);
           },
         ),
         drawer: MyDrawer(),
