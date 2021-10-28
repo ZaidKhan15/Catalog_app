@@ -8,16 +8,18 @@ class Homepage extends StatelessWidget {
 
   
   Widget build(BuildContext context) {
+    final dummylist =List.generate(50,(index)=> CatalogModel.items[0]);
     return  Scaffold(
       appBar: AppBar(
         title: Text("Catalog",style: TextStyle(color: Colors.black),)
       ),
        
         body: ListView.builder(
-          itemCount: CatalogModel.items.length,
+          
+          itemCount: dummylist.length,
           itemBuilder: (context,index)
           {
-            return ItemWidget(item: CatalogModel.items[index],);
+            return ItemWidget(item: dummylist[index],);
           },
         ),
         drawer: MyDrawer(),
