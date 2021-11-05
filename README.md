@@ -1,4 +1,4 @@
-# catalog_app
+# ShoppZone
 
 A new Flutter project.
 
