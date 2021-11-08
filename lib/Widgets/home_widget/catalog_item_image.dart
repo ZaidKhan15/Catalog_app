@@ -33,20 +33,43 @@ class CatalogItem extends StatelessWidget {
               buttonPadding: EdgeInsets.all(0),
               children: [
                 "\$${catalog.price}".text.bold.make(),
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(MyTheme.darkBluishColor),
-                      shape: MaterialStateProperty.all(StadiumBorder())),
-                  child: "Add to Cart".text.make(),
-                )
+                _addtoCart()
               ],
             ).pOnly(right: 16.0)
           ],
         ))
       ],
     )).white.rounded.square(150).make().py16();
+  }
+}
+
+class _addtoCart extends StatefulWidget {
+  const _addtoCart({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  State<_addtoCart> createState() => _addtoCartState();
+}
+
+class _addtoCartState extends State<_addtoCart> {
+
+  bool isAdded = false;
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        isAdded = isAdded.toggle();
+        setState(() {
+          
+        });
+      },
+      style: ButtonStyle(
+          backgroundColor:
+              MaterialStateProperty.all(MyTheme.darkBluishColor),
+          shape: MaterialStateProperty.all(StadiumBorder())),
+      child: isAdded?Icon(Icons.done):"Add to Cart".text.make(),
+    );
   }
 }
 
