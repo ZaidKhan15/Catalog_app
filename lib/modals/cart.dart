@@ -2,6 +2,15 @@ import 'package:catalog_app/modals/catalog.dart';
 
 
 class CartModel {
+
+//(BAD APPROACH)
+//making objects singeleton so that whenever we inintailize new object it continues with previous refrence
+static final cartModel = CartModel._internal();
+
+ CartModel._internal();
+
+ factory CartModel() => cartModel;
+ //singelton add
   // catalog field
    late CatalogModel _catalog;
 
